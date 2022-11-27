@@ -2,6 +2,8 @@ import express from 'express';
 import path from 'path';
 import { clog } from './middleware/clog';
 import { router } from './routes/index';
+import dbConnection from './config/database';
+import bodyParser from 'body-parser';
 
 const PORT = process.env.PORT || 3001;
 
@@ -13,6 +15,7 @@ app.use(clog);
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use('/api', router);
 
 console.log(`Environment is ${process.env.NODE_ENV}`);
@@ -27,6 +30,8 @@ app.get('/', (req, res) => {
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) => res.status(404).send('Not Found'));
 
-app.listen(PORT, () =>
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+dbConnection.once('open', () => {
+  app.listen(PORT, () =>
+    console.log(`App listening at http://localhost:${PORT} 🚀`)
+  );
+});
