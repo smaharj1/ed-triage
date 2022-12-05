@@ -10,6 +10,7 @@
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     /* Type Checking */
     "strict": true /* Enable all strict type-checking options. */,
+    "resolveJsonModule": true,
     "paths": {
       "@config/*": ["config/*"],
       "@routes/*": ["routes/*"],

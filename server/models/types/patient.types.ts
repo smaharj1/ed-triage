@@ -21,4 +21,6 @@ export interface IPatient extends Document {
   preexistingConditions: number;
   status: PatientStatus;
   bed: IBed;
+  bedStart: Date;
+  bedEnd: Date;
 }

@@ -17,7 +17,7 @@ const cardStyle = computed(() => ({
   <div class="oncall-card">
     <el-card shadow="hover" :body-style="cardStyle">
       <el-row>
-        <el-col :span="20">{{ staff?.name }}</el-col>
+        <el-col :span="20">{{ staff?.firstName }} {{ staff?.lastName }}</el-col>
         <el-col :span="4" class="right">
           <el-icon><PhoneFilled /></el-icon>
         </el-col>

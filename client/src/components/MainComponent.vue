@@ -2,6 +2,7 @@
 import { ref } from "vue";
 import Dashboard from "./Dashboard.vue";
 import PatientAssessment from "./patient-assessment/PatientAssessment.vue";
+import ErStatus from "./er-status/ErStatus.vue";
 
 const menuItems = ref([
   {
@@ -13,8 +14,8 @@ const menuItems = ref([
     slug: "patient-assessment",
   },
   {
-    name: "Patient Status",
-    slug: "patient-status",
+    name: "ER Status",
+    slug: "er-status",
   },
   {
     name: "On Call",
@@ -47,6 +48,9 @@ const menuSelected = (item: any) => {
       </div>
       <div v-else-if="activeMenu.slug === 'patient-assessment'">
         <PatientAssessment />
+      </div>
+      <div v-else-if="activeMenu.slug === 'er-status'">
+        <ErStatus />
       </div>
     </div>
   </div>

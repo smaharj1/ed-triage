@@ -58,6 +58,14 @@ const PatientSchema = new Schema<IPatient>(
       type: Schema.Types.ObjectId,
       ref: 'bed',
     },
+    bedStart: {
+      type: Date,
+      required: false,
+    },
+    bedEnd: {
+      type: Date,
+      required: false,
+    },
   },
   {
     timestamps: true,

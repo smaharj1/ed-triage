@@ -1,19 +1,31 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref } from "vue";
+import { onMounted, reactive, ref, computed } from "vue";
 import { getPatientsInQueue } from "../../services";
 import chroma from "chroma-js";
 
 const scale = chroma.scale(["yellow", "red"]).domain([0, 10]);
-const state = reactive({
-  patientQueue: [],
+// const state = reactive({
+//   patientQueue: [],
+// });
+const patientQueue = computed(() => {
+  return props.patients?.filter((p) => p.status === "QUEUE");
 });
-const patientQueue = ref([]);
 
-onMounted(async () => {
-  const data = await getPatientsInQueue();
-  data.sort((a, b) => b.priority - a.priority);
-  state.patientQueue = data;
-});
+const props = defineProps<{
+  patients: any;
+}>();
+
+// onMounted(async () => {
+//   if (props.patients) {
+//     state.patientQueue = props.patients.filter(
+//       (p: any) => p.status === "QUEUE"
+//     );
+//   } else {
+//     const data = await getPatientsInQueue();
+//     data.sort((a, b) => b.priority - a.priority);
+//     state.patientQueue = data;
+//   }
+// });
 
 const priorityBoxStyle = (p) => ({
   width: "100%",
@@ -28,7 +40,11 @@ const priorityBoxStyle = (p) => ({
     <el-header class="patient-header">Patient Queue</el-header>
     <ElMain class="patients">
       <div>
-        <li v-for="(patient, pid) in state.patientQueue" :key="pid">
+        Total Queue:
+        <strong>{{ patientQueue?.length || 0 }} patients</strong>
+      </div>
+      <div class="patient-list">
+        <li v-for="(patient, pid) in patientQueue" :key="pid">
           <el-row class="patient-row">
             <el-col :span="17" class="left">
               {{ patient.firstName }} {{ patient.lastName }}
@@ -60,5 +76,9 @@ const priorityBoxStyle = (p) => ({
 .patient-row {
   padding-top: 0.4em;
   padding-bottom: 0.4em;
+}
+
+.patient-list {
+  padding-top: 1em;
 }
 </style>

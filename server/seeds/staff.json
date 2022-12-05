@@ -1,0 +1,174 @@
+[
+  {
+    "firstName": "John",
+    "lastName": "Doe",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "WORKING"
+  },
+  {
+    "firstName": "Jenna",
+    "lastName": "Fisher",
+    "phone": "555-555-5555",
+    "email": "jenna@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ON_VACATION"
+  },
+  {
+    "firstName": "Jamie",
+    "lastName": "Pinto",
+    "phone": "555-555-5555",
+    "email": "jamie@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ON_VACATION"
+  },
+  {
+    "firstName": "Henna",
+    "lastName": "Lee",
+    "phone": "555-555-5555",
+    "email": "henna@hello.com",
+    "type": "doctor",
+
+    "shiftStatus": "WORKING"
+  },
+  {
+    "firstName": "Terrell",
+    "lastName": "Dennis",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "WORKING"
+  },
+  {
+    "firstName": "Roberta",
+    "lastName": "Tran",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "doctor",
+
+    "shiftStatus": "WORKING"
+  },
+  {
+    "firstName": "Peggy",
+    "lastName": "Ramirez",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "doctor",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Margarita",
+    "lastName": "Strikeland",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "doctor",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Ollie",
+    "lastName": "Parks",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Boyd",
+    "lastName": "Hoffman",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Francisco",
+    "lastName": "Grant",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ONCALL"
+  },
+
+  {
+    "firstName": "Lola",
+    "lastName": "Edwards",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Calvin",
+    "lastName": "Boone",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Tommie",
+    "lastName": "Rose",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Jerry",
+    "lastName": "McGuire",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Becky",
+    "lastName": "Oliver",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "WORKING"
+  },
+  {
+    "firstName": "Bridget",
+    "lastName": "Casey",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "doctor",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Eric",
+    "lastName": "Tucker",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "doctor",
+
+    "shiftStatus": "ONCALL"
+  },
+  {
+    "firstName": "Fannie",
+    "lastName": "Burns",
+    "phone": "555-555-5555",
+    "email": "johnDoe@hello.com",
+    "type": "nurse",
+
+    "shiftStatus": "WORKING"
+  }
+]

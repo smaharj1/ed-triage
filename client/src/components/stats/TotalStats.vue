@@ -20,7 +20,6 @@ const availableResources = computed(() => {
 
     return res[props.statKey] == props.statValue;
   });
-  console.log("Resources", props.resources, val);
 
   return val;
 });

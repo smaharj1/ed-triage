@@ -70,7 +70,7 @@ const cmToMeter = (cm: number) => {
   return meter;
 };
 
-const calculateMax = (arr: any[], key: string) => {
+export const calculateMax = (arr: any[], key: string) => {
   const max = Math.max(...arr.map(o => o[key]));
   return max;
 };
