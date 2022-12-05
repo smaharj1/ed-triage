@@ -5,7 +5,8 @@ import { OnCallJson } from "../data/OnCall";
 import { PatientQueueJson } from "../data/PatientQueue";
 import { transformPatientAdd } from "./transform";
 const { VITE_ENVIRONMENT = "dev" } = import.meta.env;
-const BASE_URL = VITE_ENVIRONMENT === "dev" ? "http://localhost:3001/api" : "";
+const BASE_URL =
+  VITE_ENVIRONMENT === "dev" ? "http://localhost:3001/api" : "/api";
 
 export const getOnCallStaff = async () => {
   try {
