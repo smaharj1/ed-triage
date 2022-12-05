@@ -54,29 +54,26 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      emit("assessmentComplete", {
-        ...ruleForm,
-        type: "bed-assignment",
-      });
+      emit("assessmentComplete", ruleForm);
     } else {
       console.log("error submit!", fields);
     }
   });
 };
 
-const addToQueue = async (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  await formEl.validate((valid, fields) => {
-    if (valid) {
-      emit("assessmentComplete", {
-        ...ruleForm,
-        type: "queue",
-      });
-    } else {
-      console.log("error submit!", fields);
-    }
-  });
-};
+// const addToQueue = async (formEl: FormInstance | undefined) => {
+//   if (!formEl) return;
+//   await formEl.validate((valid, fields) => {
+//     if (valid) {
+//       emit("assessmentComplete", {
+//         ...ruleForm,
+//         type: "queue",
+//       });
+//     } else {
+//       console.log("error submit!", fields);
+//     }
+//   });
+// };
 
 const resetForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
@@ -126,11 +123,7 @@ const resetForm = (formEl: FormInstance | undefined) => {
 
       <el-form-item>
         <el-button type="success" @click="submitForm(ruleFormRef)"
-          >Assign Bed</el-button
-        >
-
-        <el-button type="primary" @click="addToQueue(ruleFormRef)"
-          >Add to Queue</el-button
+          >Assign Resource to Patient</el-button
         >
 
         <el-button @click="resetForm(ruleFormRef)">Reset</el-button>

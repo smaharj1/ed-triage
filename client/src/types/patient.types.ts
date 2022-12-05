@@ -1,12 +1,13 @@
-import { Document } from 'mongoose';
-import { IBed } from './bed.types';
+import { BedResponse } from "./bed.types";
 
 export enum PatientStatus {
-  QUEUE = 'QUEUE',
-  TREATMENT = 'TREATMENT',
-  DISCHARGED = 'DISCHARGED',
+  QUEUE = "QUEUE",
+  TREATMENT = "TREATMENT",
+  DISCHARGED = "DISCHARGED",
 }
-export interface IPatient extends Document {
+
+export interface PatientResponse {
+  _id: string;
   pid: string;
   priority: number;
   firstName: string;
@@ -20,5 +21,7 @@ export interface IPatient extends Document {
   notes: string;
   preexistingConditions: number;
   status: PatientStatus;
-  bed: IBed;
+  bed: BedResponse;
+  createdAt: string;
+  updatedAt: string;
 }

@@ -21,16 +21,16 @@ onMounted(async () => {
         <total-stats
           :resources="totalBeds"
           title="Total Beds Available"
-          statKey="status"
-          statValue="available"
+          statKey="occupied"
+          statValue="false"
         />
       </ElCol>
       <ElCol :span="8">
         <total-stats
           :resources="totalBeds"
           title="Total Beds Occupied"
-          statKey="status"
-          statValue="occupied"
+          statKey="occupied"
+          statValue="true"
         />
       </ElCol>
       <ElCol :span="8">

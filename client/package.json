@@ -11,10 +11,13 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
     "@types/fhir": "^0.0.35",
+    "@types/luxon": "^3.1.0",
+    "@types/node": "^18.11.10",
     "axios": "^1.2.0",
     "chroma-js": "^2.4.2",
     "element-plus": "^2.2.21",
     "fhir": "^4.11.1",
+    "luxon": "^3.1.1",
     "vue": "^3.2.41"
   },
   "devDependencies": {

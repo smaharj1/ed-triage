@@ -4,6 +4,7 @@ import { clog } from './middleware/clog';
 import { router } from './routes/index';
 import dbConnection from './config/database';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 
 const PORT = process.env.PORT || 3001;
 
@@ -11,6 +12,8 @@ const app = express();
 
 // Import custom middleware, "cLog"
 app.use(clog);
+
+app.use(cors());
 
 // Middleware for parsing JSON and urlencoded form data
 app.use(express.json());

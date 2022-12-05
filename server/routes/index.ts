@@ -1,6 +1,6 @@
-import { catchAsync } from '@helpers';
 import express from 'express';
-import { addPatient } from './handlers/patient.handler';
+import PatientRouter from './patient.router';
+import BedRouter from './bed.router';
 
 export const router = express.Router();
 
@@ -9,4 +9,5 @@ router.get('/health', (req, res) => {
   res.send('Health Good');
 });
 
-router.route('/patients').post(catchAsync(addPatient));
+router.use('/patients', PatientRouter);
+router.use('/beds', BedRouter);

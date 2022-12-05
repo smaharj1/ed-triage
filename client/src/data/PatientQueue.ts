@@ -6,6 +6,7 @@ export const PatientQueueJson = [
     age: 58,
     critical: false,
     priority: 9,
+    treated: false,
   },
   {
     firstName: "Jon",
@@ -14,6 +15,7 @@ export const PatientQueueJson = [
     age: 63,
     critical: false,
     priority: 4,
+    treated: false,
   },
   {
     firstName: "Jon",
@@ -44,8 +46,9 @@ export const PatientQueueJson = [
     lastName: "Snow",
     gender: "female",
     age: 7,
-    critical: false,
+    critical: true,
     priority: 1,
+    treated: true,
   },
   {
     firstName: "Jon",

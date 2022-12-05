@@ -56,7 +56,7 @@ const patientSelected = (patient: Patient) => emit("patientSelected", patient);
         <ElCol :span="6" class="right">
           <ElButton type="success" v-if="!hideButton">
             <span class="button-text" @click="patientSelected(patient)">
-              >Select Patient</span
+              Select Patient</span
             >
           </ElButton>
         </ElCol>

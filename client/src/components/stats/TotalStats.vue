@@ -9,12 +9,20 @@ const props = defineProps<{
 }>();
 
 const availableResources = computed(() => {
-  return props.resources.filter((res) => {
+  const val = props.resources.filter((res) => {
     if (!props.statKey || !props.statValue) {
       return true;
     }
-    return res[props.statKey] === props.statValue;
+
+    if (typeof res[props.statKey] === "boolean") {
+      return res[props.statKey] === (props.statValue === "true");
+    }
+
+    return res[props.statKey] == props.statValue;
   });
+  console.log("Resources", props.resources, val);
+
+  return val;
 });
 </script>
 

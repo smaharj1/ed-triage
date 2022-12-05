@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import { reactive, ref } from "vue";
-import { searchHapiFhir } from "../../services";
+import { addPatientToDB, searchHapiFhir } from "../../services";
 import { Bundle, Patient } from "fhir/r5";
 import SearchResultDisplay from "./SearchResultDisplay.vue";
 import { ElLoading } from "element-plus";
 import Assessment from "./Assessment.vue";
+import Confirmation from "./Confirmation.vue";
 
 const search = ref("");
 const activeStep = ref(1);
 const searchResult = ref({} as Bundle<Patient>);
 
 const selectedPatient = ref(undefined as unknown as Patient);
-const selectedPatientDetails = ref({});
+const savedPatient = ref({});
 
 const startSearch = async () => {
   if (!search.value) return;
@@ -46,16 +47,31 @@ const patientSelected = (patient: Patient) => {
   console.log("Patient selected: ", patient);
 
   selectedPatient.value = patient;
-  selectedPatientDetails.value = {};
 
   activeStep.value = 2;
 };
 
-const formCompleted = (data: any) => {
-  console.log("Form completed: ", data);
+const formCompleted = async (data: any) => {
+  // console.log("Form completed: ", { ...data, ...selectedPatient.value });
+  const loading = ElLoading.service({
+    lock: true,
+    text: "Loading",
+    background: "rgba(0, 0, 0, 0.7)",
+  });
 
-  // @TODO Call the API to add to queue or bed assignment here.
-  activeStep.value = 3;
+  try {
+    const response = await addPatientToDB({
+      ...data,
+      ...selectedPatient.value,
+    });
+
+    savedPatient.value = response;
+  } catch (error) {
+    console.error(error);
+  } finally {
+    loading.close();
+    activeStep.value = 3;
+  }
 };
 </script>
 
@@ -102,7 +118,7 @@ const formCompleted = (data: any) => {
     </div>
 
     <div class="confirmation" v-if="activeStep === 3">
-      <p>Thank you for your submission.</p>
+      <p><confirmation :patient="savedPatient" /></p>
     </div>
   </div>
 </template>

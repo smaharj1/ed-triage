@@ -30,12 +30,10 @@ const priorityBoxStyle = (p) => ({
       <div>
         <li v-for="(patient, pid) in state.patientQueue" :key="pid">
           <el-row class="patient-row">
-            <el-col :span="15" class="left">
+            <el-col :span="17" class="left">
               {{ patient.firstName }} {{ patient.lastName }}
             </el-col>
-            <el-col :span="2" class="right">
-              <el-tag type="success">{{ patient.age }}</el-tag>
-            </el-col>
+
             <el-col :span="7" class="right">
               <div :style="priorityBoxStyle(patient)"></div>
             </el-col>
@@ -55,12 +53,12 @@ const priorityBoxStyle = (p) => ({
 }
 
 .patients {
-  max-height: 500px;
+  height: 500px;
   overflow-y: auto;
 }
 
 .patient-row {
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
 }
 </style>
