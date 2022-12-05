@@ -4,7 +4,7 @@
   "description": "",
   "main": "server/dist/server.js",
   "scripts": {
-    "start": "NODE_ENV=prod node server/dist/server.js",
+    "start": "cd server && NODE_ENV=prod TS_NODE_PROJECT=dist/tsconfig.json node -r tsconfig-paths/register dist/server.js",
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
@@ -22,8 +22,5 @@
   "homepage": "https://github.com/smaharj1/ed-triage#readme",
   "devDependencies": {
     "concurrently": "^7.5.0"
-  },
-  "dependencies": {
-    "chroma-js": "^2.4.2"
   }
 }

@@ -21,7 +21,7 @@ const filterStaff = () => {
     state.onCallStaff = state.originalStaffList;
   } else {
     state.onCallStaff = state.originalStaffList.filter(
-      (staff) => staff.type === filter.value
+      (staff) => (staff as any).type === filter.value
     );
   }
 };

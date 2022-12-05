@@ -9,7 +9,7 @@ const props = defineProps<{
 }>();
 
 const availableResources = computed(() => {
-  const val = props.resources.filter((res) => {
+  const val = props.resources.filter((res: any) => {
     if (!props.statKey || !props.statValue) {
       return true;
     }

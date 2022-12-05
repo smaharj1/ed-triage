@@ -8,29 +8,17 @@ const scale = chroma.scale(["yellow", "red"]).domain([0, 10]);
 //   patientQueue: [],
 // });
 const patientQueue = computed(() => {
-  return props.patients?.filter((p) => p.status === "QUEUE");
+  return props.patients?.filter((p: any) => p.status === "QUEUE");
 });
 
 const props = defineProps<{
   patients: any;
 }>();
 
-// onMounted(async () => {
-//   if (props.patients) {
-//     state.patientQueue = props.patients.filter(
-//       (p: any) => p.status === "QUEUE"
-//     );
-//   } else {
-//     const data = await getPatientsInQueue();
-//     data.sort((a, b) => b.priority - a.priority);
-//     state.patientQueue = data;
-//   }
-// });
-
-const priorityBoxStyle = (p) => ({
+const priorityBoxStyle = (p: any) => ({
   width: "100%",
   height: "1.8em",
-  "background-color": scale(p.priority).hex(),
+  "background-color": (scale(p.priority) as any).hex(),
   "margin-left": "1.5em",
 });
 </script>

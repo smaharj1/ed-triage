@@ -19,7 +19,7 @@ const patientSelected = (patient: Patient) => emit("patientSelected", patient);
     <p>
       Total found:
       {{
-        searchResult?.total || searchResult?.entry?.length > 0
+        searchResult?.total || (searchResult?.entry as any)?.length > 0
           ? "More than 20"
           : 0
       }}
@@ -31,7 +31,7 @@ const patientSelected = (patient: Patient) => emit("patientSelected", patient);
       class="search-result"
     >
       <patient-card
-        :patient="entry.resource"
+        :patient="(entry.resource as Patient)"
         @patientSelected="patientSelected"
       />
     </div>

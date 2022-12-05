@@ -6,13 +6,14 @@ import SearchResultDisplay from "./SearchResultDisplay.vue";
 import { ElLoading } from "element-plus";
 import Assessment from "./Assessment.vue";
 import Confirmation from "./Confirmation.vue";
+import { PatientResponse } from "../../types";
 
 const search = ref("");
 const activeStep = ref(1);
 const searchResult = ref({} as Bundle<Patient>);
 
 const selectedPatient = ref(undefined as unknown as Patient);
-const savedPatient = ref({});
+const savedPatient = ref({} as PatientResponse);
 
 const startSearch = async () => {
   if (!search.value) return;
@@ -23,7 +24,7 @@ const startSearch = async () => {
   });
 
   try {
-    if (isNaN(search.value)) {
+    if (isNaN(search.value as unknown as number)) {
       // Do the patient name search
       console.log("Searching for patient name: ", search.value);
       searchResult.value = (await searchHapiFhir({
@@ -97,7 +98,7 @@ const formCompleted = async (data: any) => {
         :clearable="true"
       />
 
-      <div v-if="searchResult?.entry?.length > 0">
+      <div v-if="(searchResult?.entry as any)?.length > 0">
         <search-result-display
           :searchResult="searchResult"
           @patientSelected="patientSelected"

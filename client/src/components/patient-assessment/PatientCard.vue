@@ -3,25 +3,25 @@ import { Patient, BundleEntry } from "fhir/r5";
 
 const props = defineProps<{
   patient: Patient | undefined;
-  hideButton: boolean;
+  hideButton?: boolean;
 }>();
 
 const emit = defineEmits<{
   (event: "patientSelected", ...args: [Patient]): void;
 }>();
 
-const getPatientName = (p) => {
+const getPatientName = (p: any) => {
   return `${p.name[0].given.join(" ")} ${p.name[0].family}`;
 };
 
-const getPatientAddress = (p: Patient) => {
+const getPatientAddress = (p: any) => {
   if (!p.address) return "Not Found in File";
   return `${p?.address?.[0]?.line?.join(", ")} ${p?.address?.[0].city} ${
     p?.address?.[0].state
   } ${p.address?.[0].postalCode}`;
 };
 
-const patientSelected = (patient: Patient) => emit("patientSelected", patient);
+const patientSelected = (patient: any) => emit("patientSelected", patient);
 </script>
 
 <template>
@@ -30,19 +30,19 @@ const patientSelected = (patient: Patient) => emit("patientSelected", patient);
       <ElRow>
         <ElCol :span="8" class="left">
           <span class="patient-name">{{ getPatientName(patient) }}</span>
-          | {{ patient.name?.[0].use }}
+          | {{ patient?.name?.[0].use }}
           <p class="left">
-            Gender: <strong>{{ patient.gender }}</strong>
+            Gender: <strong>{{ patient?.gender }}</strong>
           </p>
         </ElCol>
         <ElCol :span="8">
           <p class="no-margin">
-            DOB: <strong>{{ patient.birthDate }}</strong>
+            DOB: <strong>{{ patient?.birthDate }}</strong>
           </p>
         </ElCol>
         <ElCol :span="8">
           <p class="right no-margin">
-            Patient ID: <strong>{{ patient.id }}</strong>
+            Patient ID: <strong>{{ patient?.id }}</strong>
           </p>
         </ElCol>
       </ElRow>
