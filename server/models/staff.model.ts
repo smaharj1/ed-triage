@@ -13,12 +13,10 @@ const StaffSchema = new Schema<IStaff>({
   email: {
     type: String,
     required: true,
-    unique: true,
   },
   phone: {
     type: String,
     required: true,
-    unique: true,
   },
   type: {
     type: String,
