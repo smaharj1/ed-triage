@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Bundle, Patient } from "fhir/r5";
 
-const HAPI_BASE = "http://hapi.fhir.org/baseR4/Patient";
+const HAPI_BASE = "https://hapi.fhir.org/baseR4/Patient";
 export const searchHapiFhir = async ({
   name = "",
   id = "",
