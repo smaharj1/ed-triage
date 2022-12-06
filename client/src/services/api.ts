@@ -1,16 +1,34 @@
 import axios from "axios";
-import { ElLoading } from "element-plus";
-import { BedsJson } from "../data/Beds";
-import { OnCallJson } from "../data/OnCall";
-import { PatientQueueJson } from "../data/PatientQueue";
+import { ShiftStatus, StaffResponse } from "../types";
 import { transformPatientAdd } from "./transform";
 const { VITE_ENVIRONMENT = "dev" } = import.meta.env;
 const BASE_URL =
   VITE_ENVIRONMENT === "dev" ? "http://localhost:3001/api" : "/api";
 
-export const getOnCallStaff = async () => {
+export const getStaffs = async (status: string = "") => {
   try {
-    const { data } = await axios.get(`${BASE_URL}/staffs?status=oncall`);
+    const { data } = await axios.get(`${BASE_URL}/staffs?status=${status}`);
+    return data;
+  } catch (error) {
+    console.error(error);
+  }
+  return null;
+};
+
+export const staffClockInOut = async (staff: StaffResponse) => {
+  const staffId = staff._id;
+  let status = "";
+
+  // Toggle the values between working staff going home/home coming to ER.
+  if (staff.shiftStatus === ShiftStatus.WORKING) {
+    status = ShiftStatus.ONCALL;
+  } else {
+    status = ShiftStatus.WORKING;
+  }
+  try {
+    const { data } = await axios.put(`${BASE_URL}/staffs/${staffId}/clock`, {
+      shiftStatus: status,
+    });
     return data;
   } catch (error) {
     console.error(error);

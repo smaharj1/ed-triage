@@ -28,7 +28,7 @@ const cardStyle = computed(() => ({
 
 <style scoped>
 .oncall-card {
-  width: 250px;
+  width: 200px;
   margin: 10px;
 }
 

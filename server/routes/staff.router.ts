@@ -1,9 +1,10 @@
 import { catchAsync } from '@helpers';
 import express from 'express';
-import { getStaffs } from './handlers/staff.handler';
+import { getStaffs, clockInOut } from './handlers/staff.handler';
 
 const router = express.Router();
 
 router.get('/', catchAsync(getStaffs));
+router.put('/:id/clock', catchAsync(clockInOut));
 
 export default router;

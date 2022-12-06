@@ -31,3 +31,12 @@ li {
 .bold {
   font-weight: bold;
 }
+
+.staff-list li {
+  display: inline-block;
+  list-style: none;
+}
+.staff-list {
+  max-height: 250px;
+  overflow-y: scroll;
+}

@@ -1,4 +1,4 @@
-enum ShiftStatus {
+export enum ShiftStatus {
   WORKING = "WORKING",
   ON_VACATION = "ON_VACATION",
   ONCALL = "ONCALL",

@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { StaffResponse } from "../../types";
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { ElLoading } from "element-plus";
+import { staffClockInOut } from "../../services";
 const props = defineProps<{
   staff: StaffResponse;
 }>();
@@ -8,13 +10,35 @@ const props = defineProps<{
 const dialogOn = ref(true);
 
 const emit = defineEmits<{
-  (event: "close"): void;
+  (event: "close", ...args: any[]): void;
 }>();
 
-const closeDialog = () => {
-  emit("close");
+const closeDialog = async () => {
+  const loading = ElLoading.service({
+    lock: true,
+    text: "Loading",
+    spinner: "el-icon-loading",
+    background: "rgba(0, 0, 0, 0.7)",
+  });
+  console.log("HEREEE");
+
+  try {
+    const resp = await staffClockInOut(props.staff);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    loading.close();
+  }
+
+  emit("close", { refresh: true });
   dialogOn.value = false;
 };
+
+watch(dialogOn, (newV, old) => {
+  if (newV === false) {
+    emit("close");
+  }
+});
 </script>
 
 <template>
@@ -34,10 +58,12 @@ const closeDialog = () => {
           <ElCol :span="12">
             <p>Name</p>
             <p>Current Status</p>
+            <p>Email</p>
           </ElCol>
           <ElCol :span="12" class="bold">
             <p>{{ staff.firstName }} {{ staff.lastName }}</p>
             <p>{{ staff.shiftStatus }}</p>
+            <p>{{ staff.email || "" }}</p>
           </ElCol>
         </ElRow>
 
@@ -47,7 +73,11 @@ const closeDialog = () => {
       </div>
       <template #footer>
         <span class="dialog-footer">
-          <el-button type="primary" @click="closeDialog()"> Done </el-button>
+          <el-button type="primary" @click="closeDialog()">
+            {{
+              staff.shiftStatus === "ONCALL" ? "Check In" : "Leave for the day"
+            }}
+          </el-button>
         </span>
       </template>
     </el-dialog>

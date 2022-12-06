@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from "vue";
-import { getOnCallStaff } from "../../services/api";
+import { getStaffs } from "../../services/api";
 import OnCallCard from "./OnCallCard.vue";
 import { StaffResponse } from "../../types";
 import StaffDetail from "./StaffDetail.vue";
@@ -14,9 +14,7 @@ const state = reactive({
 const filter = ref("all");
 
 onMounted(async () => {
-  const staffs = await getOnCallStaff();
-  state.onCallStaff = staffs;
-  state.originalStaffList = staffs;
+  await refreshComponent();
 });
 
 const filterStaff = () => {
@@ -29,11 +27,24 @@ const filterStaff = () => {
   }
 };
 
+const callFirstAvailable = () => {
+  state.staffSelected = state.onCallStaff[0];
+};
+
 const staffClicked = (staff: StaffResponse) => {
   state.staffSelected = staff;
 };
 
-const closeTrigger = () => {
+const refreshComponent = async () => {
+  const staffs = await getStaffs("oncall");
+  state.onCallStaff = staffs;
+  state.originalStaffList = staffs;
+};
+
+const closeTrigger = ({ refresh = false } = {}) => {
+  if (refresh) {
+    refreshComponent();
+  }
   state.staffSelected = {} as StaffResponse;
 };
 </script>
@@ -45,7 +56,9 @@ const closeTrigger = () => {
         <el-icon color="#fff" size="50"><Cellphone /></el-icon>
         <p><strong>ON CALL</strong></p>
 
-        <el-button>Call First Available</el-button>
+        <el-button @click="callFirstAvailable()"
+          >Call First Available</el-button
+        >
       </el-col>
       <el-col :span="21" class="oncall-height">
         <div class="left">
@@ -88,15 +101,6 @@ const closeTrigger = () => {
 
   padding-top: 2em;
   padding-bottom: 2em;
-}
-
-.staff-list li {
-  display: inline-block;
-  list-style: none;
-}
-.staff-list {
-  max-height: 250px;
-  overflow-y: scroll;
 }
 
 .oncall-height {
