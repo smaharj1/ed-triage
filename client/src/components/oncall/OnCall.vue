@@ -2,10 +2,13 @@
 import { onMounted, reactive, ref } from "vue";
 import { getOnCallStaff } from "../../services/api";
 import OnCallCard from "./OnCallCard.vue";
+import { StaffResponse } from "../../types";
+import StaffDetail from "./StaffDetail.vue";
 
 const state = reactive({
   onCallStaff: [],
   originalStaffList: [],
+  staffSelected: {} as StaffResponse,
 });
 
 const filter = ref("all");
@@ -24,6 +27,14 @@ const filterStaff = () => {
       (staff) => (staff as any).type === filter.value
     );
   }
+};
+
+const staffClicked = (staff: StaffResponse) => {
+  state.staffSelected = staff;
+};
+
+const closeTrigger = () => {
+  state.staffSelected = {} as StaffResponse;
 };
 </script>
 
@@ -53,12 +64,16 @@ const filterStaff = () => {
           </div>
           <div class="staff-list">
             <li v-for="(staff, ind) in state.onCallStaff" :key="ind">
-              <on-call-card :staff="staff" />
+              <on-call-card :staff="staff" @click="staffClicked(staff)" />
             </li>
           </div>
         </div>
       </el-col>
     </el-row>
+
+    <div v-if="state.staffSelected?._id">
+      <staff-detail :staff="state.staffSelected" @close="closeTrigger" />
+    </div>
   </div>
 </template>
 

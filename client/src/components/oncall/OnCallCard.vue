@@ -15,7 +15,7 @@ const cardStyle = computed(() => ({
 
 <template>
   <div class="oncall-card">
-    <el-card shadow="hover" :body-style="cardStyle">
+    <el-card shadow="hover" :body-style="cardStyle" class="call">
       <el-row>
         <el-col :span="20">{{ staff?.firstName }} {{ staff?.lastName }}</el-col>
         <el-col :span="4" class="right">
@@ -30,5 +30,9 @@ const cardStyle = computed(() => ({
 .oncall-card {
   width: 250px;
   margin: 10px;
+}
+
+.call {
+  cursor: pointer;
 }
 </style>
