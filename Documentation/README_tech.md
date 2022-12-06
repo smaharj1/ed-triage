@@ -1,4 +1,4 @@
-# Emergency Department Triage (Technical Doc) - Sujil Maharjan
+# Emergency Department Triage (Technical Doc)- Sujil Maharjan
 
 This web app solves the core issues of Emergency Department Triage system: maximizing the use of available resources. This web app aims to utilize the ED resources so that all the patients get the most effective care without having to wait long hours.
 
@@ -139,3 +139,15 @@ The application is deployed using Heroku (https://www.heroku.com). The app works
   ```
 
   You can find the heroku GIT setup under the `Deploy` tab when you first setup your app. All the detailed instructions is found there.
+
+## Adding Test Data
+
+If you want to add the test data either to your local Mongo or Remote server, they are provided as `.db.json` files in `https://github.gatech.edu/smaharjan30/ed-triage/tree/main/server/seeds`. Follow the following steps:
+
+- Download tools like MongoDB Compass from https://www.mongodb.com/try/download/compass
+- Once downloaded, open the MongoDB Compass app in your desktop and click on `New Connection` on top left corner.
+- To connect to your local Mongo instance, leave the URI field as is and click `Connect`. To connect to remote DB server, add the URI you received from MongoDB Atlas for your database. Again, this uri will be in the format `mongodb+srv://<username>:<password>@yourcluster.skjdf.mongodb.net/....`
+- If you have ran the application, you should already see a database named `ed-triage`. If not, go to the root of this project and follow the installation steps above.
+- You will see the beds, staffs, and patients collections under `ed-triage`. Click on each of them and click on `Add Data` button > `Import file`. Then, import the respective `*.db.json` files from `seeds` folder.
+
+This should set you up with the starter data. It is optional to import the patient.db.json data as it can be added directly from the web app. However, for the sanity check, you should add all of the test data.
