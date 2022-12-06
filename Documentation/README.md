@@ -1,4 +1,4 @@
-# Emergency Department Triage - Sujil Maharjan
+# Emergency Department Triage (Technical Doc) - Sujil Maharjan
 
 This web app solves the core issues of Emergency Department Triage system: maximizing the use of available resources. This web app aims to utilize the ED resources so that all the patients get the most effective care without having to wait long hours.
 

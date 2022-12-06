@@ -1,0 +1,94 @@
+[{
+  "_id": {
+    "$oid": "638d3ca4abba164cbf162792"
+  },
+  "patient": {
+    "$oid": "638d2158a1afd8278235299b"
+  },
+  "bedNumber": 1,
+  "occupied": true,
+  "occupiedAt": {
+    "$date": {
+      "$numberLong": "1670200484813"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d3cc3b0b3151035b9c914"
+  },
+  "bedNumber": 2,
+  "occupied": true,
+  "__v": 0,
+  "occupiedAt": {
+    "$date": {
+      "$numberLong": "1670218191158"
+    }
+  },
+  "patient": {
+    "$oid": "638d81cfa16eb25ab1024523"
+  }
+},{
+  "_id": {
+    "$oid": "638d3cc6b0b3151035b9c916"
+  },
+  "bedNumber": 3,
+  "occupied": false,
+  "__v": 0,
+  "occupiedAt": null,
+  "patient": null
+},{
+  "_id": {
+    "$oid": "638d3cc8b0b3151035b9c918"
+  },
+  "bedNumber": 4,
+  "occupied": true,
+  "__v": 0,
+  "patient": {
+    "$oid": "638d2121a1afd82782352999"
+  }
+},{
+  "_id": {
+    "$oid": "638d3ccab0b3151035b9c91a"
+  },
+  "bedNumber": 5,
+  "occupied": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d3cccb0b3151035b9c91c"
+  },
+  "bedNumber": 6,
+  "occupied": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d3cceb0b3151035b9c91e"
+  },
+  "bedNumber": 7,
+  "occupied": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d3cd1b0b3151035b9c920"
+  },
+  "bedNumber": 8,
+  "occupied": false,
+  "__v": 0,
+  "patient": null,
+  "occupiedAt": null
+},{
+  "_id": {
+    "$oid": "638d3cd4b0b3151035b9c922"
+  },
+  "bedNumber": 9,
+  "occupied": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d3cd7b0b3151035b9c924"
+  },
+  "bedNumber": 10,
+  "occupied": false,
+  "__v": 0
+}]

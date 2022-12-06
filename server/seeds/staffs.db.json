@@ -1,0 +1,210 @@
+[{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086111"
+  },
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "WORKING",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086112"
+  },
+  "firstName": "Jenna",
+  "lastName": "Fisher",
+  "email": "jenna@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ON_VACATION",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086113"
+  },
+  "firstName": "Jamie",
+  "lastName": "Pinto",
+  "email": "jamie@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ON_VACATION",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086114"
+  },
+  "firstName": "Henna",
+  "lastName": "Lee",
+  "email": "henna@hello.com",
+  "phone": "555-555-5555",
+  "type": "doctor",
+  "shiftStatus": "WORKING",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086115"
+  },
+  "firstName": "Terrell",
+  "lastName": "Dennis",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "WORKING",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086116"
+  },
+  "firstName": "Roberta",
+  "lastName": "Tran",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "doctor",
+  "shiftStatus": "WORKING",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086117"
+  },
+  "firstName": "Peggy",
+  "lastName": "Ramirez",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "doctor",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086118"
+  },
+  "firstName": "Margarita",
+  "lastName": "Strikeland",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "doctor",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086119"
+  },
+  "firstName": "Ollie",
+  "lastName": "Parks",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e1508611a"
+  },
+  "firstName": "Boyd",
+  "lastName": "Hoffman",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e1508611b"
+  },
+  "firstName": "Francisco",
+  "lastName": "Grant",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e1508611c"
+  },
+  "firstName": "Lola",
+  "lastName": "Edwards",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e1508611d"
+  },
+  "firstName": "Calvin",
+  "lastName": "Boone",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e1508611e"
+  },
+  "firstName": "Tommie",
+  "lastName": "Rose",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e1508611f"
+  },
+  "firstName": "Jerry",
+  "lastName": "McGuire",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086120"
+  },
+  "firstName": "Becky",
+  "lastName": "Oliver",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "WORKING",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086121"
+  },
+  "firstName": "Bridget",
+  "lastName": "Casey",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "doctor",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086122"
+  },
+  "firstName": "Eric",
+  "lastName": "Tucker",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "doctor",
+  "shiftStatus": "ONCALL",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d4ed2bbab410e15086123"
+  },
+  "firstName": "Fannie",
+  "lastName": "Burns",
+  "email": "johnDoe@hello.com",
+  "phone": "555-555-5555",
+  "type": "nurse",
+  "shiftStatus": "WORKING",
+  "__v": 0
+}]

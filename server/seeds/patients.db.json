@@ -1,0 +1,382 @@
+[{
+  "_id": {
+    "$oid": "638d2121a1afd82782352999"
+  },
+  "pid": "2908422",
+  "firstName": "Kailash",
+  "lastName": "reddy",
+  "gender": "male",
+  "conditionAcute": false,
+  "activeMedication": 1,
+  "height": 170,
+  "weight": 165,
+  "injuries": 0,
+  "notes": "",
+  "preexistingConditions": 0,
+  "priority": 10,
+  "status": "TREATMENT",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670193441191"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670213800481"
+    }
+  },
+  "__v": 0,
+  "bed": {
+    "$oid": "638d3cc8b0b3151035b9c918"
+  }
+},{
+  "_id": {
+    "$oid": "638d2158a1afd8278235299b"
+  },
+  "pid": "2961159",
+  "firstName": "Jamie",
+  "lastName": "Franecki",
+  "gender": "male",
+  "conditionAcute": false,
+  "activeMedication": 2,
+  "height": 170,
+  "weight": 165,
+  "injuries": 1,
+  "notes": "",
+  "preexistingConditions": 0,
+  "priority": 3,
+  "status": "QUEUE",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670193496308"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670193496308"
+    }
+  },
+  "__v": 0,
+  "bed": {
+    "$oid": "638d3ca4abba164cbf162792"
+  }
+},{
+  "_id": {
+    "$oid": "638d227c1af3c41a6630d597"
+  },
+  "pid": "7042233",
+  "firstName": "Jamieson Harris",
+  "lastName": "Douglas",
+  "gender": "male",
+  "conditionAcute": true,
+  "activeMedication": 1,
+  "height": 170,
+  "weight": 165,
+  "injuries": 1,
+  "notes": "",
+  "preexistingConditions": 0,
+  "priority": 5,
+  "status": "DISCHARGED",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670193788831"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670216646554"
+    }
+  },
+  "__v": 0,
+  "bed": {
+    "$oid": "638d3cd1b0b3151035b9c920"
+  }
+},{
+  "_id": {
+    "$oid": "638d241c4108d9d3581b3fd2"
+  },
+  "pid": "7042234",
+  "firstName": "Joe Harris",
+  "lastName": "Nets",
+  "gender": "male",
+  "conditionAcute": false,
+  "activeMedication": 0,
+  "height": 170,
+  "weight": 165,
+  "injuries": 2,
+  "notes": "Injured Basketball Player",
+  "preexistingConditions": 0,
+  "priority": 10,
+  "status": "DISCHARGED",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670194204402"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670216872742"
+    }
+  },
+  "__v": 0,
+  "bed": {
+    "$oid": "638d3cc6b0b3151035b9c916"
+  },
+  "bedEnd": {
+    "$date": {
+      "$numberLong": "1670216872741"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "638d3d9da321f2e0f010b026"
+  },
+  "pid": "6958125",
+  "firstName": "Juan",
+  "lastName": "Perez Padilla",
+  "gender": "male",
+  "conditionAcute": false,
+  "activeMedication": 0,
+  "height": 185,
+  "weight": 165,
+  "injuries": 0,
+  "notes": "",
+  "preexistingConditions": 0,
+  "priority": 9.7,
+  "status": "DISCHARGED",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670200733346"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670217707380"
+    }
+  },
+  "__v": 0,
+  "bed": {
+    "$oid": "638d3cc6b0b3151035b9c916"
+  },
+  "bedStart": {
+    "$date": {
+      "$numberLong": "1670217682112"
+    }
+  },
+  "bedEnd": {
+    "$date": {
+      "$numberLong": "1670217707379"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "638d3dc8a321f2e0f010b02c"
+  },
+  "pid": "7179268",
+  "firstName": "Jack",
+  "lastName": "Musterman",
+  "gender": "female",
+  "conditionAcute": true,
+  "activeMedication": 2,
+  "height": 170,
+  "weight": 265,
+  "injuries": 5,
+  "notes": "",
+  "preexistingConditions": 3,
+  "priority": 10,
+  "status": "TREATMENT",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670200776668"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670200776668"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d71605e90be3fdbc8f42f"
+  },
+  "pid": "7042235",
+  "firstName": "Kevin",
+  "lastName": "Durant",
+  "gender": "male",
+  "conditionAcute": true,
+  "activeMedication": 1,
+  "height": 208,
+  "weight": 200,
+  "injuries": 2,
+  "notes": "Injured Basketball Player",
+  "preexistingConditions": 0,
+  "priority": 6,
+  "status": "QUEUE",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670213984132"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670213984132"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d7d518bb752fb7706c8d0"
+  },
+  "pid": "0f43d42f-4ebc-4141-9edb-87eef685f409",
+  "firstName": "King743",
+  "lastName": "Leannon79",
+  "gender": "male",
+  "conditionAcute": true,
+  "activeMedication": 2,
+  "height": 170,
+  "weight": 165,
+  "injuries": 5,
+  "notes": "Very very critical",
+  "preexistingConditions": 2,
+  "priority": 9,
+  "status": "DISCHARGED",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670217041986"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670217481984"
+    }
+  },
+  "__v": 0,
+  "bed": {
+    "$oid": "638d3cc3b0b3151035b9c914"
+  },
+  "bedStart": {
+    "$date": {
+      "$numberLong": "1670217421432"
+    }
+  },
+  "bedEnd": {
+    "$date": {
+      "$numberLong": "1670217481983"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "638d7efdde6b63c994450a0b"
+  },
+  "pid": "3025111",
+  "firstName": "Kevin",
+  "lastName": "Breitenberg",
+  "gender": "female",
+  "conditionAcute": false,
+  "activeMedication": 1,
+  "height": 170,
+  "weight": 165,
+  "injuries": 1,
+  "notes": "",
+  "preexistingConditions": 0,
+  "priority": 2,
+  "status": "QUEUE",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670217469576"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670217469576"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d80b9933078e7f81972a0"
+  },
+  "pid": "2017144",
+  "firstName": "Lebron",
+  "lastName": "James",
+  "gender": "male",
+  "conditionAcute": true,
+  "activeMedication": 10,
+  "height": 170,
+  "weight": 165,
+  "injuries": 10,
+  "notes": "",
+  "preexistingConditions": 5,
+  "priority": 5,
+  "status": "QUEUE",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670217913132"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670217913132"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d81cfa16eb25ab1024523"
+  },
+  "pid": "2017211",
+  "firstName": "Kyrie",
+  "lastName": "Irving",
+  "gender": "male",
+  "conditionAcute": true,
+  "activeMedication": 10,
+  "height": 170,
+  "weight": 265,
+  "injuries": 10,
+  "notes": "",
+  "preexistingConditions": 7,
+  "priority": 10,
+  "status": "TREATMENT",
+  "bed": {
+    "$oid": "638d3cc3b0b3151035b9c914"
+  },
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670218191152"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670218191152"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d8b12d81e8b8003ec2784"
+  },
+  "pid": "6991030",
+  "firstName": "Olga",
+  "lastName": "Burns",
+  "conditionAcute": false,
+  "activeMedication": 1,
+  "height": 170,
+  "weight": 165,
+  "injuries": 2,
+  "notes": "",
+  "preexistingConditions": 0,
+  "priority": 1,
+  "status": "QUEUE",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670220562221"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670220562221"
+    }
+  },
+  "__v": 0
+}]
